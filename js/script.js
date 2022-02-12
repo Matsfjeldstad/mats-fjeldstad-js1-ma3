@@ -31,6 +31,7 @@ const Rawg_API = `https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&orde
       <div class="game-container">
       <div class="game-name"> ${gameResults[i].name}</div>
       <div class="game-rating"><i class="fa-solid fa-star"></i>${gameResults[i].rating}</div>
+      <div class ="game-tags-number">Tags (${gameResults[i].tags.length})</div>
       </div>
       `;
     }
