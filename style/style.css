@@ -1,0 +1,81 @@
+body {
+  background-color: #21242d;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.loading-bounce-1,
+.loading-bounce-2,
+.loading-bounce-3 {
+  background-color: #76f49c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  animation: loading 1s ease-in-out infinite;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-list {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.game-name {
+  font-size: 1.5rem;
+}
+
+.loading-bounce-3 {
+  left: 40px;
+  animation-delay: 0.5s;
+}
+
+.loading-bounce-2 {
+  animation-delay: 0.3s;
+}
+
+.loading-bounce-1 {
+  left: -40px;
+}
+
+.fa-star {
+  color: #76f49c;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 250px;
+  background-color: #777;
+  border-radius: 5px;
+}
+
+.game-rating {
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes loading {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    opacity: 60%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
