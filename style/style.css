@@ -1,6 +1,6 @@
 body {
   background-color: #21242d;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 .loading-bounce-1,
@@ -30,6 +30,7 @@ body {
 }
 .game-name {
   font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .loading-bounce-3 {
@@ -55,8 +56,27 @@ body {
   gap: 20px;
   padding: 20px;
   width: 250px;
-  background-color: #777;
+  background-color: #222222;
   border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: 300ms ease-in-out;
+}
+
+.game-container::after {
+  content: '';
+  background-color: #21242d;
+  opacity: 85%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.game-container > * {
+  z-index: 200;
 }
 
 .game-rating {
@@ -64,6 +84,13 @@ body {
   gap: 10px;
 }
 
+.error {
+  color: lightcoral;
+}
+
+h1 {
+  color: white;
+}
 @keyframes loading {
   0% {
     top: 0;
